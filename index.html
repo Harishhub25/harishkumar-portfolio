@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f8fb;--surface:#fff;--ink:#0d1b2a;--muted:#5a6b7d;--line:#e2e8f0;--teal:#0e7c7b;--teal2:#14a3a1;--orange:#f26b3a;--tint:#e3f4f3;--on-teal:#fff;color-scheme:light;
+:root{--bg:#e6f2f4;--surface:#fff;--ink:#0d1b2a;--muted:#4f6172;--line:#cadbe1;--teal:#0e7c7b;--teal2:#14a3a1;--orange:#f26b3a;--tint:#cfe9ea;--on-teal:#fff;color-scheme:light;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1620;--surface:#112230;--ink:#eaf2f7;--muted:#9bb0c0;--line:#1f3446;--teal:#3cc7c4;--teal2:#1c9c9a;--orange:#ff8a5c;--tint:#0f2f38;--on-teal:#06222a;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0a1620;--surface:#112230;--ink:#eaf2f7;--muted:#9bb0c0;--line:#1f3446;--teal:#3cc7c4;--teal2:#1c9c9a;--orange:#ff8a5c;--tint:#0f2f38;--on-teal:#06222a;color-scheme:dark}
@@ -214,7 +214,7 @@ $("foot").textContent = "Copyright © " + new Date().getFullYear() + " | Made by
 
 const root = document.documentElement, tb = $("theme");
 function setTheme(t){ root.dataset.theme = t; tb.textContent = t === "dark" ? "Light mode" : "Dark mode"; }
-setTheme(matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+setTheme("dark");
 tb.onclick = () => setTheme(root.dataset.theme === "dark" ? "light" : "dark");
 </script>
 </body>
